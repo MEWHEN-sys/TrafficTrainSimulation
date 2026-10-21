@@ -6,16 +6,16 @@
 
 const char* mqtt_broker = "mqtt-dashboard.com";
 const int mqtt_port = 1883;
-const char* topic_publish = "";
+const char* topic_publish = "train/helloworld";
 
 // -----------------------------------------
 
-const char* ssid = "";
-const char* pass = "";
+const char* ssid = "Sern";
+const char* pass = "0983350644";
 
 
 // -----------------------------------------
-const int threshold = 800;
+const int threshold = 400;
 const int beforeLdrPin = A5;
 // -----------------------------------------
 WiFiClient wifiClient;
@@ -23,19 +23,13 @@ MqttClient mqttClient(wifiClient);
 // -----------------------------------------
 
 
-void logStatus(int beforeValue, int afterValue) {
+void logStatus(int beforeValue) {
   static unsigned long lastLogTime = 0;
   const unsigned long logInterval = 1000;
 
   bool timeElapsed  = (millis() - lastLogTime >= logInterval);
 
-  if (timeElapsed) {
-    Serial.print("After LDR: ");
-    Serial.print(afterValue);
-    Serial.print(" | Threshold: ");
-    Serial.println(threshold);
-    lastLogTime = millis();
-  }
+
 }
 
 void wificonnect(const char *ssid,const char *pass) {
@@ -73,19 +67,24 @@ void loop() {
   mqttClient.poll();
 
   int beforeValue = analogRead(beforeLdrPin);
-
-  Serial.print("Publishing message to topic ");
+  Serial.print("before: ");
+  Serial.println(beforeValue);
+  
   if (beforeValue >= threshold) {
+    Serial.print("Publishing message to topic ");
     mqttClient.beginMessage(topic_publish);
     mqttClient.print("BeforeLDRDetected");
     mqttClient.endMessage();
     Serial.print("BeforeLDRDetected");
     while (beforeValue >= threshold) {
-      delay(50);
+      int beforeValue = analogRead(beforeLdrPin);
+      delay(500);
+      Serial.print("befores: ");
+      Serial.println(beforeValue);
     }
     Serial.print("BeforeLDRNotDetected");
   } 
 
-  logStatus(beforeValue, afterValue);
+  logStatus(beforeValue);
   delay(1000);
 }
