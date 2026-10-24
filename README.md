@@ -1,5 +1,5 @@
 # Physical Computing Project 2026 - IT KMITL
-### ปัญหา: 
+## ปัญหา: 
 * จุดตัดทางรถไฟที่ใช้คนควบคุมทางกั้น ต้องพึ่งความตื่นตัวของเจ้าหน้าที่ จึงเกิด human error ได้ เช่น ลืมปิดทางกั้น ปิดช้า หรือไม่ทันเห็นรถไฟ
 * ประตูอาจปิดเร็วเกินไป (ผู้ใช้ถนนต้องรอนาน) หรือปิดช้าเกินไป (อันตราย)
 * ต้องมีคนประจำที่ทางข้ามตลอดเวลาทำให้ต้องจ่ายค่าแรงที่เยอะ
@@ -20,5 +20,12 @@
 * นายรัชชานนท์ แป้นจันทร์ 68070308
 * ปุณณสิน ครุฑสุวรรณ 68070290
 
-# Web (Poster เป็นส่วนหนึ่งของ Web นะครับ):
-## WEB [Website] (https://bankratchanon.github.io/phycom-web/) .
+
+
+
+# Web (Poster, video ก็เป็นส่วนหนึ่งของ Web นะครับ):
+### WEB [Website] (https://bankratchanon.github.io/phycom-web/) .
+
+### [Demo Video](https://youtu.be/8kT3ZACvVXo).
+
+![โปสเตอร์โปรเจกต์](https://i.ibb.co/qMxr6xkv/Phycom-Poster.png)
