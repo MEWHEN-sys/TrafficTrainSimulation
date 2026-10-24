@@ -23,7 +23,7 @@
 
 
 
-# Web (Poster, video ก็เป็นส่วนหนึ่งของ Web นะครับ):
+# Web (Poster, video ก็เป็นส่วนหนึ่งของ Web):
 ### WEB [Website](https://bankratchanon.github.io/phycom-web/).
 
 ### [Demo Video](https://youtu.be/8kT3ZACvVXo).
